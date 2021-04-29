@@ -226,19 +226,19 @@ lookout for ways to pare down our code. Let's take another look at our
 
 ```ruby
 def checkout
-    total = 0
-    #the shopping_cart method holds an array of all the user's items
-    shopping_cart.each do |item|
-      total += item.price
-    end
-
-    if coupon
-      total = total - total * coupon / 100.00
-    end
-
-    total
-
+  total = 0
+  #the shopping_cart method holds an array of all the user's items
+  shopping_cart.each do |item|
+    total += item.price
   end
+
+  if coupon
+    total = total - total * coupon / 100.00
+  end
+
+  total
+
+end
 ```
 
 Notice that we are trying to collect the prices of every item in our cart. We
