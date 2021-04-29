@@ -18,7 +18,7 @@ continue to work in the future.
 
 As programmers, we must code for the future. What does that mean? It means that,
 inevitably, our programs will grow and require change. Let's say you wrote a
-super cool web application that becomes wildly popular––how will your program
+super cool web application that becomes wildly popular — how will your program
 change to accommodate more users and more traffic and the needs of those users?
 On the other hand, let's say you build an amazing application for a client who
 then changes their mind about an important feature. What do you do? Scrap all of
@@ -26,7 +26,7 @@ your work and begin again? By writing code that is flexible and accommodates
 change, you won't have to.
 
 There is another reason why we value design principles as object-oriented
-programmers &mdash; our own happiness. Especially as Rubyists, working in a
+programmers — our own happiness. Especially as Rubyists, working in a
 language specifically designed to be a pleasure to work with, we care about
 making programs that are a pleasure to code and a pleasure for others to work
 with.
@@ -60,8 +60,8 @@ revisit them in your future work.
 >branching path wherein earlier choices close off some options and open access
 >to others. During design you wander through a maze of requirements where every
 >juncture represents a decision point that has consequences for the future. Just
->as a sculptor has chisels and files, an object-oriented designer has tools
->&mdash; principles and patterns.
+>as a sculptor has chisels and files, an object-oriented designer has tools —
+>principles and patterns.
 >
 > -Sandi Metz, *Principles of Object-Oriented Design*
 
@@ -70,7 +70,7 @@ revisit them in your future work.
 The single responsibility principle is the idea that classes in object-oriented
 programming should have one job, one responsibility, and their services (i.e.,
 methods) should be narrowly aligned with that responsibility. This principle
-goes hand in hand with the separation of concerns &mdash; the idea that the
+goes hand in hand with the separation of concerns — the idea that the
 various responsibilities, or concerns, of a computer program should be separated
 out into discrete sections.
 
@@ -95,10 +95,9 @@ class MyStore
     @item = item
   end
   
-  def item_price=(item, price)
+  def item_price=(price)
     @item_price = price
   end
-  
   
   def shopping_cart
     @shopping_cart = []
@@ -245,7 +244,7 @@ Notice that we are trying to collect the prices of every item in our cart. We
 are doing so by creating a new variable, `total`, setting it equal to 0,
 iterating over the array of items and incrementing the `total` by the price of
 each item. That's a lot of code! This code has what we might term a "code smell"
-&mdash; we are using several lines of code just to find the sum of a set of
+— we are using several lines of code just to find the sum of a set of
 numbers. This seems like a simple and common task that shouldn't require this
 much work.
 
