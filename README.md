@@ -1,10 +1,10 @@
 # Principles of Object-Oriented Design
 
-## Objectives
+## Learning Goals
 
-1. Define "design" in the context of coding.
-2. Explain why design principles are important for you as a programmer.
-3. Learn some of the basic design principles that object-oriented programmers employ.
+- Define "design" in the context of coding
+- Explain why design principles are important for you as a programmer
+- Learn some of the basic design principles that object-oriented programmers employ
 
 ## What is Code Design and Why Implement It?
 
@@ -53,8 +53,6 @@ to function as a very basic introduction to the what and why of object-oriented
 design. Here, we'll briefly discuss some of the basic principles. Keep these
 principles in mind as you continue to learn more about object-oriented Ruby and
 revisit them in your future work.
-
-### What are Object-Oriented Design Principles?
 
 >Design is not the act of following a fixed set of rules, it’s a journey along a
 >branching path wherein earlier choices close off some options and open access
@@ -112,11 +110,12 @@ class MyStore
 end
 ```
 
-As you can see, our code starts to deteriorate relatively quickly. How can we
-give an item a price? How can we retrieve that price later? What happens when
-our program needs to grow to accommodate a feature like coupons? Will we
-continue to add code to this one file? What happens if our program breaks? How
-will we determine which of our many methods is responsible for the bug?
+As you can see, our code starts to get out of control relatively quickly. What
+happens when our program needs to grow to accommodate a feature like coupons?
+Will we continue to add code to this one file? What happens if our program
+breaks? How will we determine which of our many methods is responsible for the
+bug? What if we need to change a particular feature of our app? How can we be
+sure that we've tracked down all of the affected methods?
 
 Instead, we want to separate the concerns, or responsibilities, of such an
 application, wrapping each concern in its own class that produces its own
@@ -126,7 +125,7 @@ other details and signing a user in and out. The `Item` class should have
 methods that describe an item's attributes, including its price. The
 `ShoppingCart` class can collect individual item objects and total their price
 at the time of checkout. By creating classes with their own responsibilities, we
-create an application that is organized, logical, and accommodates future
+create an application that is organized and logical, and accommodates future
 change. We also create a program that doesn't give us a headache to even look
 at.
 
